@@ -1,1 +1,1 @@
-# Lem00r
+# Welcome to Madagascar!
