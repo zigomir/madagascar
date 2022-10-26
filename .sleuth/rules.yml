@@ -1,0 +1,7 @@
+rules:
+  - transition-issues-on-deploys:
+      conditions:
+        - environment='production'
+      actions:
+        - transition_mentioned_issues:
+            state: 'Done'
