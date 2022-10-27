@@ -16,3 +16,8 @@ Testing the workflow with the added rule to restrict transitions when a conditio
 - AT-5 in status "Done" and "Approved" = empty
 
 Test again.
+
+Testing after fix released to production:
+- AT-4 in status "Done" and "Labels" = empty
+- AT-5 in status "Done" and "Labels" = "Website"
+- AT-7 in status "Backlog" and "Labels" = empty
