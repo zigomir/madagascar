@@ -4,4 +4,4 @@ rules:
         - environment='production'
       actions:
         - transition_mentioned_issues:
-            state: 'Deployed'
+            state: 'deploy'
