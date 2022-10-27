@@ -21,3 +21,8 @@ Testing after fix released to production:
 - AT-4 in status "Done" and "Labels" = empty
 - AT-5 in status "Done" and "Labels" = "Website"
 - AT-7 in status "Backlog" and "Labels" = empty
+
+Testing with the JMWE validator in place.
+- KJ-1 in status "Done" and "Labels" = empty
+- KJ-2 in status "Done" and "Labels" = "Website"
+- KJ-3 in status "Backlog" and "Labels" = "Website"
