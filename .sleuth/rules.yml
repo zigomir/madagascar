@@ -5,6 +5,11 @@ rules:
       actions:
         - transition_mentioned_issues:
             state: 'deploy'
+        
+  - failed-rules-notify:
+      conditions:
+        - failed_rules!=''
+      actions:
         - slack_personal_message:
             group: 'authors'
-            message: 'The following Sleuth Actions for deploy failed: {{failed_rules}}'
+            message: 'The following deploys have Sleuth Actions that failed: {{failed_rules}}'
