@@ -5,3 +5,12 @@ rules:
       actions:
         - transition_mentioned_issues:
             state: 'deploy'
+  - notify-of-failed-actions:
+      conditions:
+        - failed_rules!=[]
+       actions:
+        - slack_personal_message:
+            message: |
+            Some Sleuth Actions for <{{deploy_url}}|deploy> failed.
+            List of failed actions: {{failed_rules}}
+            email: 'ajulian@sleuth.io'
