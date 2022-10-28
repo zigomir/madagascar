@@ -7,4 +7,4 @@ rules:
             state: 'deploy'
         - slack_personal_message:
             group: 'authors'
-            message: 'The following Sleuth Actions for <{{deploy_url}}|deploy> failed: {{failed_rules}}'
+            message: 'The following Sleuth Actions for deploy failed: {{failed_rules}}'
