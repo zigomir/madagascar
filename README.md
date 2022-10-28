@@ -26,3 +26,5 @@ Testing with the JMWE validator in place.
 - KJ-1 in status "Done" and "Labels" = empty
 - KJ-2 in status "Done" and "Labels" = "Website"
 - KJ-3 in status "Backlog" and "Labels" = "Website"
+
+Testing Slack notifications for failed rules again.
