@@ -1,7 +1,7 @@
 rules:
   - transition-issues-on-deploys:
       conditions:
-        - environment='staging'
+        - environment='production'
       actions:
         - transition_mentioned_issues:
             state: 'deploy'
