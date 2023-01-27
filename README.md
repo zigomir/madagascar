@@ -34,6 +34,4 @@ Testing Slack notifications for failed rules with:
 
 - KJ-3 in status "Backlog" and "Labels" = "Website"
 
-Testing the failed_rules notification. Testing with condition_failed on first rule. Had to refresh the rules manually. Now going for the failure. And for real! Let's move this!
-
-Something's not right. One more try. Fixed the Slack channel to point at the right Slack workspace.
+This is to test if the rules actually refresh upon deploy.
