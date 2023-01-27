@@ -1,14 +1,14 @@
 rules:
   - transition-issues-on-deploys:
       conditions:
-        - environment='staging'
+        - environment='production'
       actions:
         - transition_mentioned_issues:
             state: 'deploy'
         
   - failed-rules-notify:
       conditions:
-        - failed_rules!=[]
+        - failed_rules!=0
       actions:
         - slack_channel_message:
             channel: '#testing'
