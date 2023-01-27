@@ -40,4 +40,4 @@ Trying Ines's suggestion !=0 (updated the YML file now)
 
 Testing with a deployed for >5m delay. Reduced the delay to >3m and updated the message to include deploy URL.
 
-Testing with the deploy_slack variable.
+Testing with the deploy_slack variable. Forgot to refresh the rules.
