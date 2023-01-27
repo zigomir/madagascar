@@ -36,4 +36,4 @@ Testing Slack notifications for failed rules with:
 
 This is to test if the rules actually refresh upon deploy.
 
-Trying Ines's suggestion !=0
+Trying Ines's suggestion !=0 (updated the YML file now)
