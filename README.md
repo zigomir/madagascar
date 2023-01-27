@@ -35,3 +35,5 @@ Testing Slack notifications for failed rules with:
 - KJ-3 in status "Backlog" and "Labels" = "Website"
 
 This is to test if the rules actually refresh upon deploy.
+
+Trying Ines's suggestion !=0
