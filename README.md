@@ -39,3 +39,5 @@ This is to test if the rules actually refresh upon deploy.
 Trying Ines's suggestion !=0 (updated the YML file now)
 
 Testing with a deployed for >5m delay. Reduced the delay to >3m and updated the message to include deploy URL.
+
+Testing with the deploy_slack variable.
