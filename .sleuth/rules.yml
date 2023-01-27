@@ -13,4 +13,4 @@ rules:
       actions:
         - slack_channel_message:
             channel: '#testing'
-            message: 'The following deploys have Sleuth Actions that failed: {{deploy_url}}'
+            message: 'The following deploys have Sleuth Actions that failed: {{deploy_slack}}'
