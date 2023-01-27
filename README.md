@@ -36,4 +36,4 @@ Testing Slack notifications for failed rules with:
 
 Testing the failed_rules notification. Testing with condition_failed on first rule. Had to refresh the rules manually. Now going for the failure. And for real! Let's move this!
 
-Something's not right. One more try.
+Something's not right. One more try. Fixed the Slack channel to point at the right Slack workspace.
