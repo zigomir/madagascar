@@ -8,8 +8,8 @@ rules:
         
   - failed-rules-notify:
       conditions:
-        - failed_rules!=''
+        - failed_rules!=[]
       actions:
-        - slack_personal_message:
-            group: 'authors'
+        - slack_channel_message:
+            channel: '#adam-test'
             message: 'The following deploys have Sleuth Actions that failed: {{failed_rules}}'
