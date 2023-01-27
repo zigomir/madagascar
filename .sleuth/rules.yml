@@ -11,5 +11,5 @@ rules:
         - failed_rules!=[]
       actions:
         - slack_channel_message:
-            channel: '#adam-test'
+            channel: '#testing'
             message: 'The following deploys have Sleuth Actions that failed: {{failed_rules}}'
