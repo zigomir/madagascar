@@ -8,7 +8,7 @@ rules:
         
   - failed-rules-notify:
       conditions:
-        - deployed_for>='3m'
+        - deployed_for>='5m'
         - failed_rules!=0
       actions:
         - slack_channel_message:
