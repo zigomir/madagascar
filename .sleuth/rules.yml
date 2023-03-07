@@ -1,25 +1,24 @@
 rules:
   - transition-issues-on-deploys:
       conditions:
-        - environment='production'
+        - environment="production"
       actions:
         - transition_mentioned_issues:
-            state: 'deploy'
+            state: "deploy"
         
   - failed-rules-notify:
       conditions:
-        - deployed_for>='3m'
+        - deployed_for>="3m"
         - failed_rules!=0
       actions:
         - slack_channel_message:
-            channel: '#testing'
-            message: 'The following deploys have Sleuth Actions that failed: {{deploy_slack}}'
-            
- 
-- test-slack-with-channel-id:
-    conditions:
-      - environment='production'
-    actions:
-      - slack_channel_message:
-          channel: 'C04H3731WKE'
-          message: 'Let's see if this Slack Channel ID thing works!'
+            channel: "#testing"
+            message: "The following deploys have Sleuth Actions that failed: {{deploy_slack}}"
+
+  - slack-with-channel-id:
+      conditions:
+        - environment="production"
+      actions:
+        - slack_channel_message:
+            channel: "C04H3731WKE"
+            message: "Let's see if this Slack Channel ID thing works!"
