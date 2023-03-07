@@ -22,4 +22,4 @@ rules:
         - slack_channel_message:
             channel: 'C04H3731WKE'
             message: |
-            Let's see if this Slack Channel ID thing works with pipe!
+              Let's see if this Slack Channel ID thing works with pipe!
