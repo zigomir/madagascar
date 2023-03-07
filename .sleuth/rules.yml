@@ -17,7 +17,7 @@ rules:
 
   - slack-with-channel-id:
       conditions:
-        - environment=9146
+        - environment="production"
       actions:
         - slack_channel_message:
             channel: "C04H3731WKE"
