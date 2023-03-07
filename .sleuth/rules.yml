@@ -14,3 +14,12 @@ rules:
         - slack_channel_message:
             channel: '#testing'
             message: 'The following deploys have Sleuth Actions that failed: {{deploy_slack}}'
+            
+ 
+- test-slack-with-channel-id:
+    conditions:
+      - environment='production'
+    actions:
+      - slack_channel_message:
+          channel: 'C04H3731WKE'
+          message: 'Let's see if this Slack Channel ID thing works!'
