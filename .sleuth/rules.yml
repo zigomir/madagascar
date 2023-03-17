@@ -18,8 +18,12 @@ rules:
   - slack-with-channel-id:
       conditions:
         - environment='production'
+        - magnitude='small'
       actions:
-        - slack_channel_message:
+        - slack_channel_approval:
+            name: 'Approval test for small batches'
+            prompt: "{{ authors_slack }}, {{ deploy_slack }} is a small batch deploy. Do you want to approve it?"
+            votes_required: 1
             channel: 'C04H3731WKE'
-            message: |
-              Let's see if this Slack Channel ID thing works with pipe!
+            on_success:
+              - add_to_deploy_message_thread: Thank you for approving!
