@@ -18,7 +18,7 @@ rules:
   - slack-with-channel-id:
       conditions:
         - environment='production'
-        - magnitude='small'
+        - magnitude='Small'
       actions:
         - slack_channel_approval:
             name: 'Approval test for small batches'
