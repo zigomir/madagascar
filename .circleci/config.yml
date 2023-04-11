@@ -18,6 +18,8 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
   say-goodbye:
+    docker:
+      - image: cimg/base:stable
     steps:
       - run:
           name: "Say goodbye"
@@ -31,5 +33,6 @@ workflows:
       - say-hello
       - hold-for-approval:
           type: approval
-          requires: say-hello
+          requires: 
+            - say-hello
       - say-goodbye
