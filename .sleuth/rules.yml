@@ -27,3 +27,23 @@ rules:
             channel: 'C04H3731WKE'
             on_success:
               - add_to_deploy_message_thread: Thank you for approving!
+              
+            
+
+  - my-custom-approval-rule-EU:
+      conditions:
+        - environment='no data'
+      actions:
+        - slack_channel_approval:
+            name: 'Decaf and Runner Approval-EU'
+            prompt: 'Deployment {{ deploy_slack }} by {{ authors_slack }} requires approval for release to PROD. Rollback procedure is to redeploy the last successful release.'
+            channel: '#testing'
+            votes_required: 1
+            authors_only: false
+            approvers:
+                - adam@julian.si
+            on_success:
+              - slack_channel_message:
+                  channel: '#testing'
+                  message: 'Deploy {{ deploy_slack }} was successfully approved!'
+              - add_to_deploy_message_thread: '{{ authors_slack }}, your code has been deployed :)'
