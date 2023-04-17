@@ -27,8 +27,6 @@ rules:
             channel: 'C04H3731WKE'
             on_success:
               - add_to_deploy_message_thread: Thank you for approving!
-              
-            
 
   - my-custom-approval-rule-EU:
       conditions:
@@ -47,3 +45,13 @@ rules:
                   channel: '#testing'
                   message: 'Deploy {{ deploy_slack }} was successfully approved!'
               - add_to_deploy_message_thread: '{{ authors_slack }}, your code has been deployed :)'
+
+  - batch-deploy:
+      conditions:
+        - environment="production"
+        - deployed_for>='1m'
+        - drift_to_new>0
+      actions:
+        - slack_channel_message:
+            channel: '#testing'
+            message: 'New batch of deploys kicked off!'
