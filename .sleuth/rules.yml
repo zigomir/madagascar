@@ -50,7 +50,7 @@ rules:
       conditions:
         - environment="production"
         - deployed_for>='1m'
-        - drift_to_new>0
+        - drift_to_staging>0
       actions:
         - slack_channel_message:
             channel: '#testing'
