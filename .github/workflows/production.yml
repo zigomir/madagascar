@@ -1,6 +1,7 @@
 name: Deploy to Production
 run-name: Move It, Move It! 
 on:
+  workflow_call:
   push:
     branches:
       - main
