@@ -1,0 +1,14 @@
+name: Reusable Workflow
+run-name: Move It, Move It! 
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+      
+jobs:
+  Deploy-to-Prod:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - run: curl -X POST -d api_key=${{ secrets.API_KEY }} -d environment=production -d sha=${{ github.sha }} https://app.sleuth.io/api/1/deployments/lem00r/madagascar/register_deploy
